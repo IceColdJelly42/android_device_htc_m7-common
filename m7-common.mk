@@ -25,7 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.target \
-    init.rc \
+    init.cm.rc \
     init.qcom.firmware_links.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
