@@ -138,6 +138,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi xxhdpi
 
+# Don't store dalvik on /cache, it gets annoying when /cache is wiped
+# by us to enable booting into recovery after flashing boot.img
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1
+
+# Cell Broadcasts
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cellbroadcast.emergencyids=0-65534
+
+# we have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
