@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # common msm8960 configs
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 
@@ -168,4 +166,4 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/m7-common/common-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/m7-common/m7-common-vendor.mk)
