@@ -29,6 +29,9 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/htc/m7-common/include
 
+#custom init rc
+TARGET_PROVIDES_INIT_RC := true 
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
